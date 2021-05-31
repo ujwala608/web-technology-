@@ -1,1 +1,22 @@
 
+<form action="/login" method="post">
+    <div class="form__element">
+        <label class="form__label" for="email">
+            Email
+            <span class="form__required">required</span>
+        </label>
+        <input class="form__input" id="email" type="text" name="email" required pattern="[^]+@[^]+[.][a-z]{2,63}$" autocomplete="email">
+    </div>
+
+    <div class="form__element">
+        <label class="form__label" for="password">
+            Password
+            <span class="form__required">required</span>
+        </label>
+        <input class="form__input" id="password" type="password" name="password" required minlength="8" aria-describedby="passwordHint" autocomplete="current-password">
+        <p class="form__hint" id="passwordHint">The password must be at least 8 characters long.</p>
+    </div>
+
+    <a href="/forgotPassword">Forgot password?</a>
+    <input class="form__submit" type="submit" value="Login">
+</form>
